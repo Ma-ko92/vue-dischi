@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* COMMON */
+body{
+    font-family: Helvetica;
+}
+
 /* HEADER */
 .header_container{
     background-color: #2e3b46;
@@ -13,3 +18,20 @@
 .logo img{
     width: 70px;
 }
+/* HEADER END */
+
+/* MAIN */
+.discs_container{
+    padding: 40px 20px;
+    background-color: #1e2e3c;
+}
+.albums_list{
+    padding: 10px 10px 25px 10px;
+    background-color: #2e3b46;
+}
+.album{
+    list-style-type: none;
+    color: white;
+    font-size: 25px;
+}
+/* MAIN END */
