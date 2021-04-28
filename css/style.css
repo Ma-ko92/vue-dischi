@@ -9,6 +9,10 @@
 body{
     font-family: Helvetica;
 }
+img{
+    width: 100%;
+    display: block;
+}
 
 /* HEADER */
 .header_container{
@@ -24,14 +28,33 @@ body{
 .discs_container{
     padding: 40px 20px;
     background-color: #1e2e3c;
+    width: calc(100% / 6);
 }
-.albums_list{
-    padding: 10px 10px 25px 10px;
+.discs_list{
+    padding: 15px 15px 25px 15px;
     background-color: #2e3b46;
 }
-.album{
+.disc{
     list-style-type: none;
+}
+.disc_title{
     color: white;
-    font-size: 25px;
+    font-size: 18;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0px;
+}
+.disc_author{
+    text-align: center;
+    color: lightgrey;
+    font-size: 15px;
+    opacity: 0.6;
+    padding: 3px 0px;
+}
+.disc_year{
+    text-align: center;
+    color: lightgrey;
+    opacity: 0.6;
+    font-size: 12px;
 }
 /* MAIN END */
