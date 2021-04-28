@@ -25,6 +25,14 @@ img{
 /* HEADER END */
 
 /* MAIN */
+.disc_filter{
+    margin: auto;
+    text-align: right;
+    padding-bottom: 10px;
+}
+.disc_filter select{
+    width: 15%;
+}
 .discs_container{
     padding: 40px 20px;
     background-color: #1e2e3c;

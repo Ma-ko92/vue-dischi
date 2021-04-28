@@ -4,7 +4,8 @@ var app = new Vue({
 
     data: {
         // Array of discs
-        discs: []
+        discs: [],
+        
 
     },
 

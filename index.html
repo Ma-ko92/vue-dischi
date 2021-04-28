@@ -35,6 +35,12 @@
         <!-- MAIN -->
         <main>
             <div class="discs_container">
+                <div class="disc_filter">
+                    <select name="" id="">
+                        <option v-for="genre in discs" :value="genre">{{genre.genre}}</option>
+                    </select>
+                </div>
+
                 <ul class="discs_list">
                     <li v-for="disc in discs" class="disc">
                         <img :src="disc.poster" alt="">
