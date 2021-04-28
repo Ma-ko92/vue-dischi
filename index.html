@@ -36,11 +36,11 @@
         <main>
             <div class="discs_container">
                 <ul class="discs_list">
-                    <li class="disc">
-                        <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                        <div class="disc_title">NEW JERSEY</div>
-                        <div class="disc_author">Bon Jovi</div>
-                        <div class="disc_year">1987</div>
+                    <li v-for="disc in discs" class="disc">
+                        <img :src="disc.poster" alt="">
+                        <div class="disc_title">{{disc.title}}</div>
+                        <div class="disc_author">{{disc.author}}</div>
+                        <div class="disc_year">{{disc.year}}</div>
                     </li>
                 </ul>
             </div>
