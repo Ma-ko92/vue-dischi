@@ -4,3 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* HEADER */
+.header_container{
+    background-color: #2e3b46;
+    padding: 10px;
+}
+.logo img{
+    width: 70px;
+}
