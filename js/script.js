@@ -5,7 +5,10 @@ var app = new Vue({
     data: {
         // Array of discs
         discs: [],
-        
+        // Array of genres
+        genres: [],
+        // Value of select
+        selectedGenre:'',
 
     },
 
@@ -15,12 +18,18 @@ var app = new Vue({
     },
     mounted() {
         axios
-            // Boolean Api link
+            // Boolean Api link.
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((response) => {
                 const objArray = response.data;
                 this.discs = objArray.response
-                console.log(this.discs)
+                
+                // Cicle for push only single genre in a array.
+                this.discs.forEach((disc) => {
+                    if(this.genres.includes(disc.genre) == false) {
+                        this.genres.push(disc.genre)
+                    }
+                });
             });
     }
 })

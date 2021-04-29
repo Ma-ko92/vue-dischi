@@ -36,13 +36,14 @@
         <main>
             <div class="discs_container">
                 <div class="disc_filter">
-                    <select name="" id="">
-                        <option v-for="genre in discs" :value="genre">{{genre.genre}}</option>
+                    <select id="genre_selector" v-model="selectedGenre">
+                        <option value="">All</option>
+                        <option v-for="genre in genres" :value="genre">{{genre}}</option>
                     </select>
                 </div>
 
                 <ul class="discs_list">
-                    <li v-for="disc in discs" class="disc">
+                    <li v-for="disc in discs" v-if="selectedGenre == '' || selectedGenre == disc.genre" class="disc">
                         <img :src="disc.poster" alt="">
                         <div class="disc_title">{{disc.title}}</div>
                         <div class="disc_author">{{disc.author}}</div>
