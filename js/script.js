@@ -22,12 +22,17 @@ var app = new Vue({
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((response) => {
                 const objArray = response.data;
-                this.discs = objArray.response
-                
+                this.discs = objArray.response;
+
+                // this function sorts dates from lowest to highest.
+                this.discs.sort((a, b) => {
+                    return a.year - b.year;
+                });
+
                 // Cicle for push only single genre in a array.
                 this.discs.forEach((disc) => {
                     if(this.genres.includes(disc.genre) == false) {
-                        this.genres.push(disc.genre)
+                        this.genres.push(disc.genre);
                     }
                 });
             });
